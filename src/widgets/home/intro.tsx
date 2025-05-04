@@ -20,6 +20,7 @@ export function Intro() {
           src="/me.webp"
           alt="me"
           className="h-full w-full object-cover"
+          unoptimized
           priority
           fill
         />
