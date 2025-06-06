@@ -3,7 +3,7 @@
 import type { ReactNode } from 'react';
 import { cva, type VariantProps } from 'class-variance-authority';
 
-const headlineVariants = cva('text-', {
+const headlineVariants = cva('', {
   variants: {
     size: {
       lg: 'text-lg',
