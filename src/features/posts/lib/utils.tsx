@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { SERVER_URL } from '@/shared/config/env';
 import { cn } from '@/shared/lib/styles';
 import { CodeWindow } from '@/shared/ui/components';
+import type { HeadlineVariants } from '@/shared/ui/kit/headline';
 import { Headline } from '@/shared/ui/kit/headline';
 import { Text } from '@/shared/ui/kit/text';
 
@@ -17,7 +18,7 @@ type ContentRenderer = (
 
 const contentRenderStrategies: Record<string, ContentRenderer> = {
   heading: (node, key) => {
-    const level = Number(node.tag.slice(1)) as 1 | 2 | 3 | 4 | 5 | 6;
+    const level = Number(node.tag.slice(1)) as HeadlineVariants['level'];
     return (
       <span key={key} className="mb-4">
         <Headline level={level}>
@@ -84,7 +85,6 @@ const contentRenderStrategies: Record<string, ContentRenderer> = {
         alt={node.value.alt ?? 'img'}
         width={node.value.width}
         height={node.value.height}
-        unoptimized
       />
     );
   },

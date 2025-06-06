@@ -5,7 +5,7 @@ import { animated, easings, useSprings } from '@react-spring/web';
 
 const AnimatedSpan = animated('span');
 
-export function SplitText({
+export const SplitText = ({
   text = '',
   delay = 150,
   animationFrom = { opacity: 0, transform: 'translate3d(0,50px,0)' },
@@ -20,7 +20,7 @@ export function SplitText({
   threshold?: number;
   rootMargin?: string;
   textAlign?: string;
-}) {
+}) => {
   const words = text.split(' ').map(word => word.split(''));
   const letters = words.flat();
   const [inView, setInView] = useState(false);
@@ -84,4 +84,4 @@ export function SplitText({
       ))}
     </p>
   );
-}
+};

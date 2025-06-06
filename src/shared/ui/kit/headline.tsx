@@ -25,15 +25,15 @@ const headlineVariants = cva('text-', {
   },
 });
 
-type HeadlineVariants = VariantProps<typeof headlineVariants>;
+export type HeadlineVariants = VariantProps<typeof headlineVariants>;
 
-export function Headline({
+export const Headline = ({
   level,
   color,
   children,
   as,
-}: HeadlineVariants & { children: ReactNode; as?: ElementType }) {
+}: HeadlineVariants & { children: ReactNode; as?: ElementType }) => {
   const Tag = as ?? (`h${level}` as keyof JSX.IntrinsicElements);
 
   return <Tag className={headlineVariants({ level, color })}>{children}</Tag>;
-}
+};
