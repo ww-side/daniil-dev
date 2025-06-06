@@ -1,9 +1,9 @@
 'use client';
 
-import { ExperienceCard } from '@/features/experience/components';
 import { experience } from '@/features/experience/lib';
+import { ExperienceCard } from '@/features/experience/ui';
 
-export function ExperienceList() {
+export const ExperienceList = () => {
   return (
     <section className="flex flex-col gap-8 pb-5">
       {experience.map(item => (
@@ -11,4 +11,4 @@ export function ExperienceList() {
       ))}
     </section>
   );
-}
+};

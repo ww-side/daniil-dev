@@ -1,9 +1,7 @@
 'use client';
 
-import { TechCategory } from '@/features/experience/components';
 import { technologies } from '@/features/experience/lib';
-
-import { React } from '@/shared/ui/icons';
+import { TechCategory } from '@/features/experience/ui';
 
 export function TechStackList() {
   return (
