@@ -31,13 +31,11 @@ const headlineVariants = cva('', {
 
 type HeadlineVariants = VariantProps<typeof headlineVariants>;
 
-export function Text({
+export const Text = ({
   size,
   color,
   weight,
   children,
-}: HeadlineVariants & { children: ReactNode }) {
-  return (
-    <p className={headlineVariants({ size, color, weight })}>{children}</p>
-  );
-}
+}: HeadlineVariants & { children: ReactNode }) => (
+  <p className={headlineVariants({ size, color, weight })}>{children}</p>
+);

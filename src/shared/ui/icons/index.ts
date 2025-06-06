@@ -1,3 +1,3 @@
 export * from './social-networks';
 export * from './tech';
-export { Mailbox, SquareArrowRight } from 'lucide-react';
+export { ArrowUp, Mailbox, SquareArrowRight } from 'lucide-react';
